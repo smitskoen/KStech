@@ -48,6 +48,8 @@ header{
   border-radius: 25px;
   transition: font-weight 0.15s;
   line-height: 2;
+  text-decoration: none;
+  color: black;
 }
 .header-button:hover{
   font-weight: 700;
@@ -99,7 +101,8 @@ header{
   padding: 10px 40px 10px 40px;
   font-size: 16px;
   font-weight: 600;
-  display:inline-block
+  display:inline-block;
+  text-decoration: none;  
 }
 .button-left{
   color: white;
