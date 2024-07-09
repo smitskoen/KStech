@@ -2,7 +2,7 @@
 
 *{
   box-sizing: border-box;
-/*   outline: 1px solid red; */
+  /* outline: 1px solid red; */
 }
 body{
   margin: 0;
@@ -48,7 +48,7 @@ header{
 }
 .header-left{
   font-family: Ysabeau;
-  font-size: 2.2rem;
+  font-size: 2.2em;
   font-weight: 600;
   display: flex;
   margin: auto;
@@ -71,7 +71,7 @@ nav li{
 }
 nav a{
   cursor: pointer;
-  font-size: 1.3rem;
+  font-size: 1.3em;
   font-weight: 500;
   padding: 1rem;
   white-space: nowrap;
@@ -249,23 +249,27 @@ figure{
 
 .second-section{
   min-height: 44rem;
+  display: table;
+  width:100%;
 }
 .second-section-left{
-  display: inline-block;
+  display: table-cell;
   width: 50%;
   position: relative;
+  height: max-content;
  }
 .second-section-picture{
-  width: 31rem;
+  width: 30em;
   position: absolute;
   right: 50%;
   top: 50%;
-  transform: translateX(50%) translateY(50%);
+  transform: translateX(50%) translateY(-50%);
 }
 .second-section-right{
-  display: inline-block;
+  display: table-cell;
   width: 50%;
-  position: absolute;
+  position: relative;
+  height: max-content;
  }
 .second-cont{
   position: absolute;
@@ -273,6 +277,7 @@ figure{
   left: 15%;
   max-width: 35rem;
   font-family: poppins;
+  align-items: center;
  }
 .second-section-1, 
 .second-section-2, 
@@ -282,7 +287,7 @@ figure{
 }
 .second-section-2{
   color: rgb(80, 180, 130);
-  font-size: 3.5rem;
+  font-size: 3.5em;
   font-weight: 600;
 }
 
@@ -292,7 +297,6 @@ figure{
 
 .second-section-5{
   align-items: center;
-  margin-bottom: 3.125rem;
   
 }
 .section-top{
@@ -302,12 +306,33 @@ figure{
 .section-title, 
 .form-title{
   font-family: poppins;
-  font-size: 2.25rem;
+  font-size: 2.25em;
   font-weight: 600;
   padding-top: 2rem;
   color: rgb(80, 180, 130);
 }
 
+
+@media (max-width: 50rem) {
+  .second-section{
+    min-height:initial;
+  }
+  
+  .second-section-left{
+    display:none
+  }
+  .second-section-right{
+    display:block;
+    width: 100%;
+    margin: auto;
+  }
+  .second-cont{
+    position: initial;
+    margin:auto;
+    
+    
+  }
+}
 /* section 3*/
 
 
@@ -319,24 +344,24 @@ figure{
 }
 [class^="box-"]{
   box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.12), 0 0 0.375rem rgba(0, 0, 0, 0.06);
-  width: 22rem;
+  width: min(22rem, 100vw);
   top: 2rem;
   margin: 5rem auto;
 }
 
 .in-box-image{
-  width: 22rem;
+  width: min(22rem, 100vw);
   height: 15.5rem;
   object-fit: cover;
 }
 .in-box-title, 
 .in-box-text{
-  width: 19rem;
-  margin: 1.25rem;
+  max-width: 20rem;
+  margin: 1rem;
 }
 .in-box-title{
   font-family: poppins;
-  font-size: 1.125rem;
+  font-size: 1.1em;
   font-weight: 500;
 }
 .in-box-text{
@@ -380,7 +405,7 @@ figure{
   color: rgb(80, 180, 130);
 }
 .step-text{
-  font-size: 0.875rem;
+  font-size: 0.875em;
   color: rgb(75 ,75 ,75);
 }
 
@@ -390,13 +415,12 @@ figure{
 .price-group{
   border-radius: 1rem;
   box-shadow: 0 0.625rem 1.25rem rgb(205, 205, 205, 0.7);
-  margin: 2rem auto;
+  margin: 2rem 5em;
   padding: 15px;
-  max-width: 70rem;
 }
 .price-title{
   font-family: poppins;
-  font-size: 1.375rem;
+  font-size: 1.375em;
   font-weight: 500;
   color: rgb(80, 180, 130);
   text-align: center;
@@ -405,12 +429,17 @@ figure{
   .price-list{
     column-count: 2;   
   }
+  .price-group{
+    width:70rem;
+    margin: 2rem auto;
+  }
 }
 .price-set{
   border: solid 0.625rem white;
   padding: 0.625rem;
-  width: 25rem;
-  height: 3rem;
+  width:100%;
+  height: 6em;
+  /* max-width: 25rem; */
   break-inside : avoid;
   }
 .price-set-top{
@@ -418,19 +447,20 @@ figure{
   grid-template-columns: auto 1fr auto;
 }
 .price-item{
-  font-size: 1.25rem;
+  font-size: 1.25em;
   }
 .space-holder{
   border-bottom: 0.2px solid rgb(205, 205, 205);
   display: inline-block;
   }
 .price{
- font-size: 1.125rem;
+ font-size: 1.125em;
  font-weight: 600;
 }
 .price-set-bottom{
   color: rgb(150, 150, 150);
   margin-top: 0.625rem;
+  font-size: .9em;
 }
 
 /*footer*/
@@ -441,7 +471,6 @@ footer{
 
 .footer-top{
   width:80%;
-  min-width: 50rem;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -470,7 +499,7 @@ footer{
   display: inline-block;
   margin: auto 0;
   align-self: center;
-  font-size: 1.5rem;
+  font-size: 1.5em;
 }
 .footer-legal, 
 .form-info{
@@ -501,7 +530,6 @@ height: 3rem;
 .footer-bottom{
   color: rgb(120, 120, 120);
   width: 80%;
-  min-width: 50rem;
   margin:auto;
   padding: 1.25rem 0;
   border-top: solid 0.2px rgb(120, 120, 120);
@@ -531,8 +559,8 @@ height: 3rem;
 /* section 8*/
 .section-thanks{
   color: rgb(80, 180, 130);
-  font-size: 1.5rem;
-  margin: 6.25rem;
+  font-size: 1.5em;
+  margin: 10%;
 }
 
 
@@ -566,5 +594,5 @@ textarea{
 
 
 .section-cond{
-  padding: 6.25rem;
+  padding: 10%;
 }
