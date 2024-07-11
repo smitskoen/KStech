@@ -452,6 +452,11 @@ figure {
   font-size: 0.875em;
   color: rgb(75, 75, 75);
 }
+@media screen and (min-width: 1300px){
+  .step{
+    margin: 2rem auto;
+  }
+}
 
 /* section 5*/
 
@@ -646,7 +651,7 @@ footer {
   margin: 0 auto;
   padding-bottom: 2rem;
   max-width: 62.5rem;
-  margin: 2rem 5em;
+  margin: 2rem auto;
 }
 
 input[type="text"],
@@ -668,6 +673,12 @@ textarea {
 
 textarea {
   font-family: Roboto;
+}
+
+@media screen and (max-width: 1300px) {
+  .form-full{
+    margin: 2rem 8.625em;
+  }
 }
 
 /*section 7*/
